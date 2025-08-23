@@ -34,3 +34,15 @@ $ rustc ./main.rs
 ```
 $ ./main
 ```
+
+## Cargo を使用してみる
+- cargo new で新しくプロジェクトを作成
+```
+$ cargo new hello_world
+```
+
+## ここまでのまとめ
+- rustcコマンドを使ってコンパイルができる
+- cargo new コマンドを使ってパッケージを作ることができる
+- cargo build コマンドを使ってビルドができる
+- cargo run コマンド使ってプログラムを動かすことができる
