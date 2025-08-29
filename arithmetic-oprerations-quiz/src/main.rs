@@ -32,7 +32,7 @@ fn main() {
                     num_of_correct += 1;
                     break;
                 } else {
-                    println!("不正解です");
+                    println!("不正解です。正解は:{}", op1 + op2);
                 }
             },
 
@@ -57,7 +57,7 @@ fn main() {
                     num_of_correct += 1;
                     break;
                 } else {
-                    println!("不正解です");
+                    println!("不正解です。正解は:{}", op1 - op2);
                 }
             },
             _ => unreachable!(),
