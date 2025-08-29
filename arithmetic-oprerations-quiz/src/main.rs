@@ -1,6 +1,12 @@
+use rand::Rng;
+
 fn main() {
     // 加算クイズ
-    println!("1 + 1 = ??");
+    // ランダムな数字を生成
+    let op1 = rand::rng().random_range(0..100);
+    let op2 = rand::rng().random_range(0..100);
+
+    println!("{} + {} = ??", op1, op2);
     println!("?? の値を入力してください：");
     // ユーザからの入力を保持する変数を用意
     let mut ans_input = String::new();
@@ -11,14 +17,18 @@ fn main() {
     let ans_input = ans_input.trim().parse::<i32>().unwrap();
     dbg!(ans_input);
 
-    if dbg!(ans_input == 1 + 1) {
+    if dbg!(ans_input == op1 + op2) {
         println!("正解です！");
     } else {
         println!("不正解です");
     }
 
     // 減算クイズ
-    println!("1 - 4 = ??");
+    // ランダムな数字を生成
+    let op1 = rand::rng().random_range(0..100);
+    let op2 = rand::rng().random_range(0..100);
+
+    println!("{} - {} = ??", op1, op2);
     println!("?? の値を入力してください：");
     // ユーザからの入力を保持する変数を用意
     let mut ans_input = String::new();
@@ -29,12 +39,9 @@ fn main() {
     let ans_input = ans_input.trim().parse::<i32>().unwrap();
     dbg!(ans_input);
 
-    if dbg!(ans_input == 1 - 4) {
+    if dbg!(ans_input == op1 - op2) {
         println!("正解です！");
     } else {
         println!("不正解です");
     }
-
-    println!("i32 が扱えるデータ範囲：{} ~ {}", i32::MIN, i32::MAX);
-    println!("u32 が扱えるデータ範囲：{} ~ {}", u32::MIN, u32::MAX);
 }
